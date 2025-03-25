@@ -37,6 +37,13 @@ Cypress.Commands.add('preencherSenha', (senha = 'secret_sauce') => {
   Cypress.Commands.add('SelecionarProduto', (produto1 = 'Sauce Labs Backpack') => {
     cy.contains(produto1).click();  
   });
+
+
+  Cypress.Commands.add('iconeCarrinho', () => {
+    return cy.get('.shopping_cart_badge'); // Retorna o elemento do ícone do carrinho
+});
+
+
   
 Cypress.Commands.add('testeComando', () => {
     console.log("Comando Cypress carregado corretamente!");
