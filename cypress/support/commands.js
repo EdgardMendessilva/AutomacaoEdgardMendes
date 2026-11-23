@@ -30,20 +30,9 @@ Cypress.Commands.add('preencherUsuario', (usuario = 'standard_user') => {
 });
 
 Cypress.Commands.add('preencherSenha', (senha = 'secret_sauce') => {
-    cy.campoSenha().type(senha);  
-  });
-  
-  Cypress.Commands.add('SelecionarProduto', (produto1 = 'Sauce Labs Backpack') => {
-    cy.contains(produto1).click();  
-  });
-
-
-  Cypress.Commands.add('iconeCarrinho', () => {
-    return cy.get('.shopping_cart_badge'); 
+    cy.campoSenha().type(senha);
 });
 
-
-  
-Cypress.Commands.add('testeComando', () => {
-    console.log("Comando Cypress carregado corretamente!");
+Cypress.Commands.add('SelecionarProduto', (produto1 = 'Sauce Labs Backpack') => {
+    cy.contains(produto1).click();
 });
